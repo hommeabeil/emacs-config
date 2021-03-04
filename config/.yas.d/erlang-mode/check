@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: check
+# key: check
+# --
+{alias, [
+{check, [lint, xref, dialyzer, edoc,
+{eunit, "-c"}, {ct, "-c"}, {proper, "-c"},
+{cover, "-v --min_coverage=0"},
+todo
+]}
+]}.

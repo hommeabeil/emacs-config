@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: question
+# key: question
+# --
+** TODO ${1:Question} [0/2]
+- [ ] demandé
+- [ ] réponse
+*** Réponse

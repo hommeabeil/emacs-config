@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: us
+# key: us
+# --
+** ${1:Nom}
+*** Dev Details
+
+*** Acceptance Criteria
+
+*** Dev Estimate

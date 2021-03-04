@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: test_case
+# key: tc
+# --
+${1:NAME}() ->
+    [{doc, "${2:DOC}"}].
+$1(_Config) ->
+    ct:fail("Not implemented").

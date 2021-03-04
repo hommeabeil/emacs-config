@@ -1,0 +1,25 @@
+# -*- mode: snippet -*-
+# name: gen_event
+# key: gen_event
+# --
+-module(`(file-name-nondirectory (file-name-sans-extension (buffer-file-name)))`).
+
+-behavior(gen_event).
+
+-export([init/1,
+        handle_call/2,
+        handle_event/2]).
+
+
+%%====================================================================
+%% gen_event handler
+%%====================================================================
+
+init([]) ->
+    {ok, {}}.
+
+handle_call(_Request, State) ->
+    {ok, ok, State}.
+
+handle_event(_Event, State) ->
+    {ok, State}.

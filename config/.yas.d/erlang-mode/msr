@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: msr
+# key: msr
+# --
+meck:expect(${1:MODULE}, ${2:FCT}, fun(${3:_}) -> ok end),

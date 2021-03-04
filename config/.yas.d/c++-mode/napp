@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: app
+# key: napp
+# --
+namespace gdos {
+namespace app {
+
+}
+}

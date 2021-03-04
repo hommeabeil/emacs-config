@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: gdos
+# key: gdos
+# --
+using namespace gdos;

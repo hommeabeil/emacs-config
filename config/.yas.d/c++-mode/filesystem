@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: filesystem
+# key: fs
+# --
+namespace fs = boost::filesystem;
