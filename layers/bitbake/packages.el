@@ -30,7 +30,8 @@
 ;;; Code:
 
 (defconst bitbake-packages
-  '((bb-mode :location (recipe :fetcher github :repo mferland/bb-mode)))
+  '((bb-mode :location (recipe :fetcher github :repo mferland/bb-mode))
+    company)
   "The list of Lisp packages required by the bitbake layer.
 
 Each entry is either:
@@ -62,5 +63,10 @@ Each entry is either:
     (use-package bb-mode
       :defer t
       :mode "\\.bb\\'"))
+
+(defun bitbake/post-init-company ()
+  (spacemacs|add-company-backends
+    :backends company-capf
+    :modes bb-mode))
 
 ;;; packages.el ends here
