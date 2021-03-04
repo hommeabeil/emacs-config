@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: prop
+# key: prop
+# --
+${1:NAME}() ->
+?FORALL(${2:V}, ${3:TYPE},
+begin
+${4:PROPERTY}
+end).

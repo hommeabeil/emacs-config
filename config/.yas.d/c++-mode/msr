@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: mock return
+# key: msr
+# --
+EXPECT_CALL(${1:mock}, ${2:method}).WillOnce(Return(${3:ret}));

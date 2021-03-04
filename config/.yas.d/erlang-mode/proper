@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: proper
+# key: proper
+# --
+-module(`(file-name-nondirectory (file-name-sans-extension (buffer-file-name)))`).
+-include_lib("proper/include/proper.hrl").
+-include_lib("eunit/include/eunit.hrl").
+-compile(nowarn_export_all).
+-compile(export_all).

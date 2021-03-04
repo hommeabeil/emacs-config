@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: gtestFile
+# key: gtestFile
+# --
+#include "gtest/gtest.h"
+#include "gmock/gmock.h"
+
+using namespace std;
+using namespace ::testing;
+
+class `(file-name-nondirectory (file-name-sans-extension (buffer-file-name)))` : public Test{
+protected:
+  virtual void SetUp(){};
+  virtual void TearDown(){};
+};

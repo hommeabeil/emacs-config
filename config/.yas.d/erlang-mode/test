@@ -1,0 +1,26 @@
+# -*- mode: snippet -*-
+# name: test
+# key: test
+# --
+-module(`(file-name-nondirectory (file-name-sans-extension (buffer-file-name)))`).
+-include_lib("common_test/include/ct.hrl").
+-include_lib("eunit/include/eunit.hrl").
+-compile(nowarn_export_all).
+-compile(export_all).
+
+-define(TIMEOUT, 1000).
+
+all() ->
+     [].
+
+init_per_suite(Config) ->
+    Config.
+
+end_per_suite(Config) ->
+    Config.
+
+init_per_testcase(_, Config) ->
+    Config.
+
+end_per_testcase(_, Config) ->
+    Config.

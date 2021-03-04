@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: mck
+# key: mck
+# --
+meck:new(${1:MODULE}),

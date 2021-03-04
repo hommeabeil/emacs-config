@@ -1,0 +1,37 @@
+# -*- mode: snippet -*-
+# name: gen_statem
+# key: gen_statem
+# --
+-module(`(file-name-nondirectory (file-name-sans-extension (buffer-file-name)))`).
+
+-behavior(gen_statem).
+
+-export([callback_mode/0,
+         init/1,
+         handle_event/4]).
+
+-export([start_link/0]).
+
+%%====================================================================
+%% Public API
+%%====================================================================
+
+-spec start_link() -> {ok, pid()} | {error, term()} | ignore.
+start_link() ->
+    gen_statem:start_link({local, ?MODULE}, ?MODULE, [], []).
+
+
+%%====================================================================
+%% gen_statem handle
+%%====================================================================
+
+callback_mode() ->
+    [handle_event_function, state_enter].
+
+init([]) ->
+    {ok, init_state, []}.
+
+handle_event(enter, _OldSate, State, Data) ->
+    {next_state, State, Data};
+handle_event({call, From}, _Content, State, Data) ->
+    {next_state, State, Data, [{reply, From, ok}]}.

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: todo
+# key: todo
+# --
+%% TODO: JBouchard `(format-time-string "%F") ${1:TODO}`

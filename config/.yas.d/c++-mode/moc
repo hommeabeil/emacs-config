@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: mock on call
+# key: moc
+# --
+ON_CALL(${1:mock}, ${2:method}).WillByDefault(Return(${3:ret}));
