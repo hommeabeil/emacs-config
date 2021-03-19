@@ -62,7 +62,7 @@ Each entry is either:
 (defun bitbake/init-bb-mode ()
     (use-package bb-mode
       :defer t
-      :mode "\\.bb\\'"))
+      :mode "\\.bb\\(append\\|class\\)?\\'"))
 
 (defun bitbake/post-init-company ()
   (spacemacs|add-company-backends
